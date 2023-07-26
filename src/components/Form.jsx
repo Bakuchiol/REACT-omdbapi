@@ -17,7 +17,7 @@ function Form(props) {
         // change existing formData to event target(actual input itself and .name)
         //prevent page from refreshing on form submission
         // event.target.name also has data of event.target.value
-        // ...formdata :: object/ replicate it but now the atarget as it changes, it is now se
+        // ...formdata :: object/ replicate it but now the target as it changes, it is now se
         setFormData({...formData, [event.target
         .name]:event.target.value})
     }
@@ -30,7 +30,8 @@ function Form(props) {
     }
 
   return (
-    <div>
+    <div id='searchBar'>
+      <h3>OMDb API Movie Search</h3>
       <form onSubmit={handleSubmit}>
         <input 
         onChange={handleChange}
@@ -41,6 +42,8 @@ function Form(props) {
         {/* to click in order for submit to work */}
         <input type='submit' value='submit'/> 
       </form>
+      <br />
+      <hr />
     </div>
   )
 }
